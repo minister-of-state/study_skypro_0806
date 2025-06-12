@@ -1,5 +1,6 @@
 from datetime import datetime
 from src.masks import mask_card, mask_account
+from src.processing import filter_by_state, sort_by_date
 
 
 def mask_account_card(info: str) -> str:
@@ -27,3 +28,24 @@ def get_date(date_str: str) -> str:
     """
     dt = datetime.fromisoformat(date_str)
     return dt.strftime("%d.%m.%Y")
+
+
+def demo_filter_by_state():
+    """
+    Демонстрация работы filter_by_state.
+    Можно заменить input() на реальные данные или тестовый список.
+    """
+    data = input()
+    result = filter_by_state(data, state='EXECUTED')
+    return result
+
+
+def demo_sort_by_date():
+    """
+    Демонстрация работы sort_by_date.
+    """
+    date_info = input()
+
+    result = sort_by_date(date_info, reverse=True)
+    # По убыванию (сначала последние)
+    return result
