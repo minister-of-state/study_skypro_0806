@@ -12,3 +12,9 @@ def filter_by_state(data: list[dict], state: str = "EXECUTED") -> list[dict]:
     словари с указанным значением 'state'.
     """
     return [item for item in data if item.get("state") == state]
+
+
+"""
+Пример строки:
+[{'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.512364'}]
+"""
