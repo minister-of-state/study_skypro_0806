@@ -1,17 +1,23 @@
-[project]
-name = "cards-dz"
+[tool.poetry]
+name = "study-skypro-0806"
 version = "0.1"
-description = "Домашнее задание для курса SkyPro по картам"
-authors = [
-    {name = "GeorgySinyutich", email = "georgsinuytich@mail.ru"}
-]
-license = {text = "creativecommon"}
+packages = [{ include = "src" }]
+description = "Проект для урока по банковской программе СкайПро"
+authors = ["minister-of-state <georgsinuytich@mail.ru>"]
+license = "MIT"
 readme = "README.md"
-requires-python = ">=3.13"
-dependencies = [
-]
 
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^7.2.0"
+black = "^25.1.0"
+isort = "^6.0.1"
+mypy = "^1.16.0"
+pytest = "^8.4.0"
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
